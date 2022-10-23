@@ -10,7 +10,7 @@ import {
   PROFILE_PAGE_UNLOADED,
   PROFILE_FAVORITES_PAGE_LOADED,
   PROFILE_FAVORITES_PAGE_UNLOADED,
-  SEARCH_BY_TITLE
+  SEARCH_BY_TITLE,
 } from "../constants/actionTypes";
 
 const reducer = (state = {}, action) => {
@@ -48,13 +48,13 @@ const reducer = (state = {}, action) => {
         currentPage: 0,
       };
     case SEARCH_BY_TITLE:
-        return {
-          ...state,
-          items: action.payload.items,
-          itemsCount: action.payload.itemsCount,
-          tab: null,
-          currentPage: 0,
-        };
+      return {
+        ...state,
+        items: action.payload.items,
+        itemsCount: action.payload.itemsCount,
+        tab: null,
+        currentPage: 0,
+      };
     case HOME_PAGE_LOADED:
       return {
         ...state,
